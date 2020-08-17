@@ -64,7 +64,7 @@ install {
                     developer {
                         //开发者的个人信息
                         id ''
-                        name 'yujia'
+                        name '13638528597'
                         email 'yujia963014657@gmail.com'
                     }
                 }
@@ -78,7 +78,7 @@ install {
     }
 }
 
-//上传到JCenter
+//上传到JCenterThis resource requires authentication
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
