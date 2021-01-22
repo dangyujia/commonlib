@@ -1,4 +1,4 @@
-package com.app.rain.http.retrofitlivedata
+package com.app.commonlib.http
 
 import androidx.lifecycle.LiveData
 import retrofit2.Call

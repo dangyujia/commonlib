@@ -2,9 +2,9 @@ package com.app.commonlib.download
 
 import android.text.TextUtils
 import android.util.Log
-import com.app.commonlib.Commonlib.BASE_URL
-import com.app.commonlib.Commonlib.SAVE_IMAGE_PATH
-import com.app.commonlib.Commonlib.SAVE_MEDIA_PATH
+import com.app.commonlib.Common.BASE_URL
+import com.app.commonlib.Common.SAVE_IMAGE_PATH
+import com.app.commonlib.Common.SAVE_MEDIA_PATH
 import com.app.commonlib.utils.FileUtils
 
 import okhttp3.ResponseBody

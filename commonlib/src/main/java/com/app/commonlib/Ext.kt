@@ -4,11 +4,11 @@ import android.content.Context
 import android.os.Handler
 import android.os.Looper
 import android.widget.ImageView
-import com.app.commonlib.Commonlib.ERROR
-import com.app.commonlib.Commonlib.PLACEHOLDER
+import com.app.commonlib.Common.ERROR
+import com.app.commonlib.Common.PLACEHOLDER
 import com.app.commonlib.glide.CenterCropRoundCornerTransform
 import com.app.commonlib.utils.DisplayUtils
-import com.app.rain.commonlib.util.glide.RoundedCornersTransform
+import com.app.commonlib.glide.RoundedCornersTransform
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.CircleCrop

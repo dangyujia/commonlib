@@ -1,7 +1,6 @@
 package com.app.commonlib.http
 
-import com.app.commonlib.Commonlib
-import com.app.rain.http.retrofitlivedata.LiveDataCallAdapterFactory
+import com.app.commonlib.Common
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -33,7 +32,7 @@ inline fun <reified T> create(
 
 /*构建okHttp*/
 fun okHttpClient() = OkHttpClient.Builder()
-        .connectTimeout(Commonlib.httpTime(), TimeUnit.SECONDS)
-        .readTimeout(Commonlib.httpTime(), TimeUnit.SECONDS)
+        .connectTimeout(Common.httpTime(), TimeUnit.SECONDS)
+        .readTimeout(Common.httpTime(), TimeUnit.SECONDS)
         .addNetworkInterceptor(loggingInterceptor())
         .build()

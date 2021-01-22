@@ -1,4 +1,4 @@
-package com.app.rain.commonlib.util.glide
+package com.app.commonlib.glide
 
 import android.content.Context
 import android.graphics.*

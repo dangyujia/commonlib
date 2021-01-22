@@ -2,7 +2,7 @@ package com.app.commonlib.http
 
 import android.util.Log
 import com.app.commonlib.BuildConfig
-import com.app.commonlib.Commonlib
+import com.app.commonlib.Common
 import okhttp3.Interceptor
 import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
@@ -20,7 +20,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 fun loggingInterceptor() =
         HttpLoggingInterceptor(object : HttpLoggingInterceptor.Logger {
             override fun log(message: String) {
-                Log.d(Commonlib.httpLog(), message)
+                Log.d(Common.httpLog(), message)
             }
         }).apply {
             level = if (BuildConfig.DEBUG) {

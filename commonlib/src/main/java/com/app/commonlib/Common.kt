@@ -12,7 +12,7 @@ import kotlin.properties.Delegates
  * @Version 1.0
  * @Description 全局context
  */
-object Commonlib {
+object Common {
 
     private lateinit var context: Context
 

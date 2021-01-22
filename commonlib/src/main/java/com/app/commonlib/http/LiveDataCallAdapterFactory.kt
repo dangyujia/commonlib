@@ -1,4 +1,4 @@
-package com.app.rain.http.retrofitlivedata
+package com.app.commonlib.http
 
 import androidx.lifecycle.LiveData
 import retrofit2.CallAdapter
@@ -15,14 +15,14 @@ import java.lang.reflect.Type
  */
 class LiveDataCallAdapterFactory(var creator: (Int, String, Any?) -> Any) : CallAdapter.Factory() {
     override fun get(
-        returnType: Type,
-        annotations: Array<Annotation>,
-        retrofit: Retrofit
+            returnType: Type,
+            annotations: Array<Annotation>,
+            retrofit: Retrofit
     ): CallAdapter<*, *>? {
         if (getRawType(returnType) != LiveData::class.java) return null
         //获取第一个泛型类型
         val observableType =
-            getParameterUpperBound(0, returnType as ParameterizedType)
+                getParameterUpperBound(0, returnType as ParameterizedType)
         val rawType = getRawType(observableType)
         if (rawType != creator(0, "", null).javaClass) {
             throw IllegalArgumentException("type must be ApiResponse")
