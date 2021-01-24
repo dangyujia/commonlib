@@ -18,12 +18,11 @@ import java.security.MessageDigest
  */
 open class RoundedCornersTransform(
     context: Context?,
-    radius: Float
+    private var radius: Float
 ) :
     Transformation<Bitmap> {
 
     private val mBitmapPool: BitmapPool = Glide.get(context!!).bitmapPool
-    private var radius: Float = radius
     private var isLeftTop = false
     private var isRightTop = false
     private var isLeftBottom = false

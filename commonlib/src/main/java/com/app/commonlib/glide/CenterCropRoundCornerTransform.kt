@@ -49,14 +49,12 @@ open class CenterCropRoundCornerTransform(px: Int) : CenterCrop() {
         }
         val canvas = Canvas(result!!)
         val paint = Paint()
-        paint.setShader(
-            BitmapShader(
+        paint.shader = BitmapShader(
                 source,
                 Shader.TileMode.REPEAT,
                 Shader.TileMode.REPEAT
-            )
         )
-        paint.setAntiAlias(true)
+        paint.isAntiAlias = true
         val rectF = RectF(
             0f, 0f,
             source.width.toFloat(),

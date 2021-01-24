@@ -104,7 +104,7 @@ object ToastUtils {
         try {
             val tn = mFieldTN!![toast]
             val preHandler = mFieldTNHandler!![tn] as Handler
-            mFieldTNHandler!![tn] = FiexHandler(preHandler)
+            mFieldTNHandler!![tn] = FixHandler(preHandler)
         } catch (e: Exception) {
             e.printStackTrace()
         }
@@ -114,7 +114,7 @@ object ToastUtils {
      * 7.1手机上的BadTokenException 相关处理
      *
      */
-    private class FiexHandler internal constructor(private val impl: Handler) : Handler() {
+    private class FixHandler internal constructor(private val impl: Handler) : Handler() {
         override fun dispatchMessage(msg: Message) {
             try {
                 super.dispatchMessage(msg)
